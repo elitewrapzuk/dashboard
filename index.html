@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elite Wrapz Dashboard</title>
+  <style>
+    :root {
+      --wrapz-green: #00f7c6; /* Elite Wrapz aqua-green */
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+    }
+    .logo {
+      text-align: center;
+      padding: 15px 0 5px;
+    }
+    .logo img {
+      max-width: 150px;
+    }
+    .grid {
+      flex: 1;
+      display: grid;
+      grid-template-rows: 1fr 1fr; /* Two equal rows */
+      gap: 10px;
+      padding: 10px;
+    }
+    .row {
+      display: grid;
+      gap: 10px;
+    }
+    /* Top row: Quote wider, Optimiser a bit wider than before */
+    .row.top {
+      grid-template-columns: 1.2fr 1fr;
+    }
+    /* Bottom row: swap widths */
+    .row.bottom {
+      grid-template-columns: 1fr 1.2fr;
+    }
+    .tile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--wrapz-green);
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: transform 0.15s ease, background 0.15s ease;
+      text-align: center;
+      text-transform: uppercase; /* Capitalise everything */
+      user-select: none; /* Prevent accidental text highlight */
+    }
+    .tile:hover {
+      transform: scale(1.03);
+      background: #00dfad; /* Darker shade on hover */
+    }
+    .tile:active {
+      transform: scale(0.97); /* Press-down effect */
+      background: #00cfa0; /* Even darker when pressed */
+    }
+    .tile.large-text {
+      font-size: 30px;
+    }
+    .tile.medium-text {
+      font-size: 20px;
+    }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #333;
+      padding: 10px;
+      background: #f5f5f5;
+    }
+    footer a {
+      color: #00b894; /* subtle green link */
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">
+    <img src="logo.png" alt="Elite Wrapz Logo">
+  </div>
+
+  <div class="grid">
+    <!-- Top row -->
+    <div class="row top">
+      <a href="https://elitewrapzuk.github.io/elitequoter/" target="_blank" class="tile large-text">📝 NEW QUOTE</a>
+      <a href="https://elitewrapzuk.github.io/eliteoptimiser/" target="_blank" class="tile large-text">⚡ NEW OPTIMISER</a>
+    </div>
+
+    <!-- Bottom row -->
+    <div class="row bottom">
+      <a href="https://elitewrapzuk.github.io/remotequoteform/" target="_blank" class="tile medium-text">🌍 REMOTE QUOTE FORM</a>
+      <a href="https://elitewrapzuk.github.io/elitewrapzsignatures/" target="_blank" class="tile medium-text">✍ ELITE SIGNATURES</a>
+    </div>
+  </div>
+
+  <footer>
+    Elite Wrapz | <a href="https://www.elitewrapz.uk" target="_blank">www.elitewrapz.uk</a> | Proudly supporting MIND Charity
+  </footer>
+
+</body>
+</html>

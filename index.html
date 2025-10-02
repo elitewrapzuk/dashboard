@@ -26,7 +26,7 @@
     .grid {
       flex: 1;
       display: grid;
-      grid-template-rows: 1fr 1fr; /* Two equal rows */
+      grid-template-rows: 1fr 1fr 1fr; /* Now three rows */
       gap: 10px;
       padding: 10px;
     }
@@ -38,9 +38,13 @@
     .row.top {
       grid-template-columns: 1.2fr 1fr;
     }
-    /* Bottom row: swap widths */
-    .row.bottom {
+    /* Middle row for Remote Quote + Signatures */
+    .row.middle {
       grid-template-columns: 1fr 1.2fr;
+    }
+    /* Bottom row for Remote Signatures (single full-width) */
+    .row.bottom {
+      grid-template-columns: 1fr;
     }
     .tile {
       display: flex;
@@ -96,10 +100,15 @@
       <a href="https://elitewrapzuk.github.io/eliteoptimiser/" target="_blank" class="tile large-text">⚡ NEW OPTIMISER</a>
     </div>
 
-    <!-- Bottom row -->
-    <div class="row bottom">
+    <!-- Middle row -->
+    <div class="row middle">
       <a href="https://elitewrapzuk.github.io/remotequoteform/" target="_blank" class="tile medium-text">🌍 REMOTE QUOTE FORM</a>
       <a href="https://elitewrapzuk.github.io/elitewrapzsignatures/" target="_blank" class="tile medium-text">✍ ELITE SIGNATURES</a>
+    </div>
+
+    <!-- Bottom row -->
+    <div class="row bottom">
+      <a href="https://elitewrapzuk.github.io/remotesignature/" target="_blank" class="tile medium-text">📲 REMOTE SIGNATURES</a>
     </div>
   </div>
 

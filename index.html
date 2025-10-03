@@ -26,7 +26,7 @@
     .grid {
       flex: 1;
       display: grid;
-      grid-template-rows: 1fr 1fr 1fr; /* Now three rows */
+      grid-template-rows: auto auto auto auto; /* now 4 rows */
       gap: 10px;
       padding: 10px;
     }
@@ -46,6 +46,10 @@
     .row.bottom {
       grid-template-columns: 1fr;
     }
+    /* New row for scratch tools */
+    .row.scratch {
+      grid-template-columns: 1fr 1fr;
+    }
     .tile {
       display: flex;
       align-items: center;
@@ -59,6 +63,7 @@
       text-align: center;
       text-transform: uppercase; /* Capitalise everything */
       user-select: none; /* Prevent accidental text highlight */
+      padding: 20px;
     }
     .tile:hover {
       transform: scale(1.03);
@@ -109,6 +114,12 @@
     <!-- Bottom row -->
     <div class="row bottom">
       <a href="https://elitewrapzuk.github.io/remotesignature/" target="_blank" class="tile medium-text">📲 REMOTE SIGNATURES</a>
+    </div>
+
+    <!-- Scratch tools row -->
+    <div class="row scratch">
+      <a href="https://elitewrapzuk.github.io/scratchcard/" target="_blank" class="tile medium-text">🎟️ SCRATCH CARD</a>
+      <a href="https://elitewrapzuk.github.io/scratchchecker/" target="_blank" class="tile medium-text">✅ SCRATCH CHECKER</a>
     </div>
   </div>
 
